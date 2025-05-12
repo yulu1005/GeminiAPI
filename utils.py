@@ -4,7 +4,7 @@ from datetime import datetime
 import google.generativeai as genai
 
 # 初始化 Gemini Flash 模型
-genai.configure(api_key="AIzaSyCbb7CY1YhUH2s88srRbkQkIoy2m1owRew")
+genai.configure(api_key="")
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 # 安全呼叫 Gemini
