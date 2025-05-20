@@ -1,14 +1,10 @@
-# 使用 Python 基礎映像
-FROM python:3.10
+FROM pytorch/pytorch:2.6.0-cuda11.8
 
-# 設定工作目錄
 WORKDIR /app
 
-# 複製專案檔案
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
 
-# 安裝依賴
-RUN pip install -r requirements.txt
-
-# 指定執行指令
 CMD ["python", "app.py"]
